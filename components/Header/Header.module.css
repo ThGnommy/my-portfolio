@@ -1,0 +1,27 @@
+.header {
+  @apply flex flex-col sm:flex-row w-full justify-start items-start sm:items-center pt-12 pb-20;
+}
+
+.me {
+  @apply rounded-full cursor-pointer;
+}
+
+.navSection {
+  @apply flex flex-col h-[100px] w-full md:w-6/12 justify-between sm:pl-8 mt-4 sm:mt-0;
+}
+
+.navSection h1 {
+  @apply relative text-xl sm:text-3xl font-bold;
+}
+
+.navSection h1 span {
+  @apply absolute top-10 left-0 h-[0.35rem] w-10 bg-secondary rounded-full;
+}
+
+.navSection nav {
+  @apply flex flex-wrap flex-row justify-between w-full;
+}
+
+.navSection nav a {
+  @apply text-base hover:text-secondary transition-colors duration-150;
+}
