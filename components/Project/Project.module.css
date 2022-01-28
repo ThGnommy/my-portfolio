@@ -1,5 +1,5 @@
 .project {
-  @apply flex flex-col sm:flex-row justify-between items-start sm:items-center;
+  @apply flex flex-col csm:flex-row justify-between items-center py-4;
 }
 
 .project ul li {
@@ -11,6 +11,10 @@
   @apply font-thin text-lg mr-2;
 }
 
-.projectImage {
-  @apply flex-grow rounded-md shadow mr-4;
+.projectLinks {
+  @apply flex max-w-[20rem] csm:w-2/5;
+}
+
+.projectLinks a {
+  @apply bg-secondary rounded text-center w-24 even:mx-2 p-2 italic transition-transform hover:scale-105;
 }

@@ -9,5 +9,5 @@ html {
 }
 
 .btn-primary {
-  @apply rounded-full h-10 w-32 bg-secondary
+  @apply rounded-full h-10 w-32 bg-secondary;
 }

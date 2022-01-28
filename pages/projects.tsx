@@ -19,7 +19,7 @@ export const Projects: NextPage = ({ projects }: any) => {
 // This gets called on every request
 export const getStaticProps: GetStaticProps = async () => {
   // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/hello`);
+  const res = await fetch(`http://localhost:3000/api/data`);
   const data = await res.json();
 
   // Pass data to the page via props
