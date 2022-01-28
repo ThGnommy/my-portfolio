@@ -1,0 +1,16 @@
+.project {
+  @apply flex flex-col sm:flex-row justify-between items-start sm:items-center;
+}
+
+.project ul li {
+  list-style: none;
+}
+
+.project ul li::before {
+  content: ">";
+  @apply font-thin text-lg mr-2;
+}
+
+.projectImage {
+  @apply flex-grow rounded-md shadow mr-4;
+}

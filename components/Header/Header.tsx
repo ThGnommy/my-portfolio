@@ -18,8 +18,8 @@ export const Header = () => {
           THOMAS BRANDOLI<span></span>
         </h1>
         <nav>
-          <Link href="#">HOME</Link>
-          <Link href="#">PROJECTS</Link>
+          <Link href="/">HOME</Link>
+          <Link href="/projects">PROJECTS</Link>
           <Link href="#">CONTACT</Link>
         </nav>
       </div>

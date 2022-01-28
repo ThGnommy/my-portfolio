@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "My Pexel",
+      "description": "Aute et est elit minim proident duis minim occaecat dolore in excepteur fugiat est nulla.",
+      "tech": ["React", "Redux", "Firebase", "Styled Components"],
+      "image": "/images/projects/project-mypexel.png",
+      "website_link": "https://my-pexels.netlify.app/",
+      "github_link": ""
+    },
+    {
+      "id": 2,
+      "name": "Rest Countries",
+      "description": "Aute et est elit minim proident duis minim occaecat dolore in excepteur fugiat est nulla.",
+      "tech": ["React", "TailwindCSS", "Typescript"],
+      "image": "/images/projects/project-restcountries.png",
+      "website_link": "https://quizzical-snyder-526910.netlify.app/",
+      "github_link": ""
+    }
+  ]
+}
