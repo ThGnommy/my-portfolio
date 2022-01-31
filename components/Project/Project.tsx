@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Project.module.css";
 import { v4 as uuidv4 } from "uuid";
-import ImageWrapper from "../Utils/ImageWrapper";
+import ImageWrapper from "../Utils/ImageWrapper/ImageWrapper";
 import Link from "next/link";
 
 export const Project = ({ projects }: any) => {
