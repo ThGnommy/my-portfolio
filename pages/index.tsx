@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
@@ -10,13 +10,28 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-      <h1 className="text-3xl font-bold underline text-red-500">
-      Hello world!
-    </h1>
+      <main className="h-screen w-full bg-black flex flex-col justify-center items-center">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="hard-hat"
+          className="text-white w-32 m-8"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <path
+            fill="currentColor"
+            d="M480 288c0-80.25-49.28-148.92-119.19-177.62L320 192V80a16 16 0 0 0-16-16h-96a16 16 0 0 0-16 16v112l-40.81-81.62C81.28 139.08 32 207.75 32 288v64h448zm16 96H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h480a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
+          ></path>
+        </svg>
+        <h1 className="text-xl sm:text-3xl uppercase p-8 border-4 font-bold text-white">
+          under (re)construction
+        </h1>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
