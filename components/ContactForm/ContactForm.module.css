@@ -18,6 +18,10 @@
   @apply rounded-lg focus:ring-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-secondary;
 }
 
+.form textarea {
+  @apply mb-2;
+}
+
 .form button {
-  @apply bg-primary text-black-primary;
+  @apply bg-secondary text-primary py-2 w-28 rounded-lg;
 }

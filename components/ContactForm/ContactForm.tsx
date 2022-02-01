@@ -5,7 +5,6 @@ export const ContactForm = () => {
     <form
       className={styles.form}
       name="contact"
-      action="/thankyou"
       method="POST"
       data-netlify="true"
     >
