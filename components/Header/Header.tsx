@@ -1,15 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React from "react";
 import classes from "./Header.module.css";
 
 export const Header = () => {
   const router = useRouter();
-
-  useEffect(() => {
-    console.log(router.pathname);
-  }, []);
 
   return (
     <header className={classes.header}>
