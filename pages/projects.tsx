@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import Layout from "../components/Layout";
 import Project from "../components/Project";
 import { IProject } from "./api/types";
@@ -17,10 +17,16 @@ export const Projects: NextPage = ({ projects }: any) => {
 };
 
 // This gets called on every request
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   // Fetch data from external API
   const res = await fetch(`http://localhost:3000/api/data`);
   const data = await res.json();
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
 
   // Pass data to the page via props
   return { props: { projects: data } };
