@@ -19,6 +19,7 @@ export const Project = ({ projects }: any) => {
             height={280}
             objectFit="cover"
             quality={50}
+            alt="project-image"
           />
         </ImageWrapper>
         <div className="max-w-[20rem] csm:w-2/5">
