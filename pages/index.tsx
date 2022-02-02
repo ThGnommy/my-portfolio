@@ -12,10 +12,10 @@ const Home: NextPage = () => {
       </Head>
       <Layout>
         <section>
-          <h2 className="text-5xl font-light pb-8">hello, I'm Thomas.</h2>
+          <h2 className="text-5xl font-light pb-8">hello, I&apos;m Thomas.</h2>
           <p className="text-lg font-thin">
-            I'm a web developer from Modena, Italy. I'm specializing in react
-            framework
+            I'm a web developer from Modena, Italy. I&apos;m specializing in
+            react framework
           </p>
         </section>
       </Layout>

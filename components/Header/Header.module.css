@@ -23,5 +23,9 @@
 }
 
 .navSection nav a {
-  @apply text-base hover:text-secondary transition-colors duration-150;
+  @apply text-base cursor-pointer hover:text-secondary transition-colors duration-150;
+}
+
+.navSection nav a:nth-child(3) {
+  @apply text-base flex relative justify-center items-center;
 }

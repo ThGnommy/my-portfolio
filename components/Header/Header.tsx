@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { IconArrow } from "../Utils/Icons/IconArrow";
 import classes from "./Header.module.css";
 
 export const Header = () => {
@@ -39,6 +40,17 @@ export const Header = () => {
               }
             >
               PROJECTS
+            </a>
+          </Link>
+          <Link href="/my-pens">
+            <a
+              className={
+                router.pathname === "/my-pens"
+                  ? "text-secondary"
+                  : "text-primary"
+              }
+            >
+              MY PENS
             </a>
           </Link>
           <Link href="/contact">

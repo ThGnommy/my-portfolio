@@ -1,0 +1,11 @@
+.dropdown {
+  @apply absolute z-10 top-8 bg-primary text-custom-dark w-12 py-2 px-4 rounded-lg drop-shadow-2xl transition-all scale-0;
+}
+
+.open {
+  @apply scale-100;
+}
+
+.dropdown ul li {
+  @apply cursor-pointer;
+}
