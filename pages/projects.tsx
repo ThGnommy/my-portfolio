@@ -1,7 +1,8 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Layout from "../components/Layout";
 import Project from "../components/Project";
 import { IProject } from "./api/types";
+import projects from "./api/projects";
 
 export const Projects: NextPage = ({ projects }: any) => {
   return (
@@ -17,24 +18,9 @@ export const Projects: NextPage = ({ projects }: any) => {
 };
 
 // This gets called on every request
-export const getServerSideProps: GetServerSideProps = async () => {
-  let data_url =
-    process.env.NODE_ENV === "production"
-      ? "https://www.thomasbrandoli.dev/api/data"
-      : "http://localhost:3000/api/data";
-
-  // Fetch data from external API
-  const res = await fetch(data_url);
-  const data = await res.json();
-
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
-
+export const getStaticProps: GetStaticProps = async () => {
   // Pass data to the page via props
-  return { props: { projects: data } };
+  return { props: { projects } };
 };
 
 export default Projects;

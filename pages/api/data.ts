@@ -5,7 +5,11 @@ import projects from "./projects.json";
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<IProject[]>
+  res: NextApiResponse<IProject[] | any>
 ) {
-  res.status(200).json(projects.projects);
+  try {
+    res.status(200).json(projects.projects);
+  } catch (err) {
+    res.status(500).json({ error: "failed to load data" });
+  }
 }
