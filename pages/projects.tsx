@@ -18,8 +18,13 @@ export const Projects: NextPage = ({ projects }: any) => {
 
 // This gets called on every request
 export const getServerSideProps: GetServerSideProps = async () => {
+  let data_url =
+    process.env.NODE_ENV === "production"
+      ? "http://www.thomasbrandoli.dev/api/data"
+      : "http://localhost:3000/api/data";
+
   // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/data`);
+  const res = await fetch(data_url);
   const data = await res.json();
 
   if (!data) {
