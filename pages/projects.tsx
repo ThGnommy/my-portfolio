@@ -3,17 +3,24 @@ import Layout from "../components/Layout";
 import Project from "../components/Project";
 import { IProject } from "./api/types";
 import projects from "./api/projects";
+import Head from "next/head";
+import useTitle from "../hooks/useTitle";
 
 export const Projects: NextPage = ({ projects }: any) => {
   return (
-    <Layout>
-      <section>
-        <h2 className="text-4xl font-medium pb-8">Projects</h2>
-        {projects.map((project: IProject) => (
-          <Project key={project.id} projects={project} />
-        ))}
-      </section>
-    </Layout>
+    <>
+      <Head>
+        <title>{useTitle()}</title>
+      </Head>
+      <Layout>
+        <section>
+          <h2 className="text-4xl font-medium pb-8">Projects</h2>
+          {projects.map((project: IProject) => (
+            <Project key={project.id} projects={project} />
+          ))}
+        </section>
+      </Layout>
+    </>
   );
 };
 

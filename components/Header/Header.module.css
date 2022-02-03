@@ -3,7 +3,7 @@
 }
 
 .me {
-  @apply rounded-full cursor-pointer;
+  @apply rounded-full;
 }
 
 .navSection {

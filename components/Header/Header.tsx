@@ -43,12 +43,10 @@ export const Header = () => {
               PROJECTS
             </a>
           </Link>
-          <Link href="/my-pens">
+          <Link href="/pens">
             <a
               className={
-                router.pathname === "/my-pens"
-                  ? "text-secondary"
-                  : "text-primary"
+                router.pathname === "/pens" ? "text-secondary" : "text-primary"
               }
             >
               MY PENS
