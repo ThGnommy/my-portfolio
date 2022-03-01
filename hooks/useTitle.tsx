@@ -13,8 +13,10 @@ export const useTitle = () => {
   const cap_path = first_letter + path.slice(2);
 
   useEffect(() => {
-    setTitle(`Thomas Brandoli | ${cap_path}`);
-  }, []);
+
+    if(cap_path === "") setTitle(`Thomas Brandoli | Home`);    
+    else setTitle(`Thomas Brandoli | ${cap_path}`);
+  }, [cap_path]);
 
   return title;
 };

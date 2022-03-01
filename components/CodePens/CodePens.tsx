@@ -8,10 +8,11 @@ export const CodePens = () => {
 
       {/* Less is More */}
 
-      <div className="flex items-center w-full mb-8 border-b-2 border-b-primary">
-        <IconPen />
+      <div className="flex items-center w-full mb-8">
+        {/* <IconPen /> */}
         <div>
-          <h3 className="text-3xl italic ml-2 py-1">Less is more.</h3>
+
+          <h3 className="text-3xl italic ml-2 py-1">✍️ Less is more.</h3>
         </div>
       </div>
       <iframe
@@ -32,10 +33,9 @@ export const CodePens = () => {
 
       {/* Anxiety. */}
 
-      <div className="flex items-center w-full my-8 border-b-2 border-b-primary">
-        <IconPen />
+      <div className="flex items-center w-full my-8">
         <div>
-          <h3 className="text-3xl italic ml-2 py-1">Anxiety.</h3>
+          <h3 className="text-3xl italic ml-2 py-1">✍️ Anxiety.</h3>
         </div>
       </div>
       <iframe
@@ -55,10 +55,9 @@ export const CodePens = () => {
       </iframe>
 
       {/* Truth - Perspective */}
-      <div className="flex items-center w-full my-8 border-b-2 border-b-primary">
-        <IconPen />
+      <div className="flex items-center w-full my-8">
         <div>
-          <h3 className="text-3xl italic ml-2 py-1">Truth - Perspective</h3>
+          <h3 className="text-3xl italic ml-2 py-1">✍️ Truth - Perspective</h3>
         </div>
       </div>
       <iframe
@@ -80,11 +79,10 @@ export const CodePens = () => {
       </iframe>
 
       {/* Less fear, more understanding. */}
-      <div className="flex items-center w-full my-8 border-b-2 border-b-primary">
-        <IconPen />
+      <div className="flex items-center w-full my-8">
         <div>
           <h3 className="text-3xl italic ml-2 py-1">
-            Less fear, more understanding.
+            ✍️ Less fear, more understanding.
           </h3>
         </div>
       </div>
@@ -107,10 +105,9 @@ export const CodePens = () => {
       </iframe>
 
       {/* Success - Experience */}
-      <div className="flex items-center w-full my-8 border-b-2 border-b-primary">
-        <IconPen />
+      <div className="flex items-center w-full my-8">
         <div>
-          <h3 className="text-3xl italic ml-2 py-1">Success - Experience</h3>
+          <h3 className="text-3xl italic ml-2 py-1">✍️ Success - Experience</h3>
         </div>
       </div>
       <iframe
@@ -132,10 +129,9 @@ export const CodePens = () => {
       </iframe>
 
       {/* Talk doesn't cook rise. */}
-      <div className="flex items-center w-full my-8 border-b-2 border-b-primary">
-        <IconPen />
+      <div className="flex items-center w-full my-8">
         <div>
-          <h3 className="text-3xl italic ml-2 py-1">Talk doesn't cook rise.</h3>
+          <h3 className="text-3xl italic ml-2 py-1">✍️ Talk doesn't cook rise.</h3>
         </div>
       </div>
       <iframe
