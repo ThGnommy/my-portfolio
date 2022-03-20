@@ -2,20 +2,48 @@
   @apply flex flex-col;
 }
 
+.formName {
+  @apply relative my-8;
+}
+
+.formEmail {
+  @apply relative mb-8;
+}
+
+.formName label,
+.formEmail label {
+  @apply absolute top-1/2 left-10 -translate-x-1/2 -translate-y-1/2 text-custom-dark transition-all duration-200 ease-in;
+}
+
+.formName input:focus + label,
+.formName input:valid + label {
+  @apply -top-4 left-7 text-primary;
+}
+
+.formEmail input:focus + label,
+.formEmail input:valid + label {
+  @apply -top-4 left-7 text-primary;
+}
+
+.formMessage {
+  @apply relative;
+}
+
+.formMessage label {
+  @apply absolute top-5 left-14 -translate-x-1/2 -translate-y-1/2 text-custom-dark transition-all duration-200 ease-in;
+}
+
+.formMessage textarea:focus + label,
+.formMessage textarea:valid + label {
+  @apply -top-4 left-11 text-primary;
+}
+
 .form label {
-  @apply text-lg;
-}
-
-.form label:first-child {
-  @apply pb-2;
-}
-
-.form label:not(:first-child) {
-  @apply py-2;
+  @apply text-lg pointer-events-none;
 }
 
 .input {
-  @apply text-custom-dark rounded-lg focus:ring-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-secondary;
+  @apply w-full text-custom-dark rounded-lg focus:ring-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-secondary;
 }
 
 .form textarea {

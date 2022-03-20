@@ -15,10 +15,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <section>
-          <h2 className="text-5xl font-light pb-8">👋 hello there, I&apos;m Thomas.</h2>
+        <section className="pb-8">
+          <h2 className="text-5xl font-light pb-8">
+            👋 hello there, I&apos;m Thomas.
+          </h2>
           <p className="text-lg font-thin">
-          📍 I'm a Front End Developer from Modena, Italy. 
+            📍 I'm a Front End Developer from Modena, Italy.
           </p>
           <br />
           <p className="text-lg font-thin">
@@ -26,15 +28,16 @@ const Home: NextPage = () => {
           </p>
           <br />
           <p className="text-lg font-thin">
-            👀 Aside from my job, I enjoy to explore other technologies, and programming languages.
-            Currently, I enjoy playing with the 🤖 Godot Game Engine
+            👀 Aside from my job, I like to explore other technologies, and
+            programming languages. Currently, I enjoy playing with the 🤖 Godot
+            Game Engine.
           </p>
           <br />
           <p className="text-lg font-thin">
-            ☀️ When I not code, you can find me immersed in a book 📖, in a videogame 🕹️, at jumping rope, or outside walking 🚶‍♂️ and running 🏃‍♂️ in the nature 🌳
+            ☀️ When I don't code, you can find me immersed in a book 📖, in a
+            videogame 🕹️, at jumping rope, or outside walking 🚶‍♂️ and running 🏃‍♂️
+            in the nature 🌳.
           </p>
-          <p className="text-lg font-thin"></p>
-          <p className="text-lg font-thin"></p>
         </section>
       </Layout>
     </div>
