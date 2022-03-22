@@ -53,3 +53,7 @@
 .form button {
   @apply bg-secondary text-primary py-2 w-28 rounded-lg;
 }
+
+.form button:disabled {
+  @apply bg-primary text-custom-dark py-2 w-28 rounded-lg;
+}

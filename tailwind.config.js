@@ -20,6 +20,19 @@ module.exports = {
         csm: "900px",
         cxs: "400px",
       },
+      keyframes: {
+        modalUp: {
+          "0%": {
+            transform: "translateX(-50%) translateY(300%)",
+          },
+          "100%": {
+            transform: "translateX(-50%) translateY(-50%)",
+          },
+        },
+      },
+      animation: {
+        "move-up": "modalUp 1.5s ease-out forwards",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],
