@@ -11,3 +11,33 @@ html {
 .btn-primary {
   @apply rounded-full h-10 w-32 bg-secondary;
 }
+
+@layer components {
+  .underline-animation {
+    @apply after:absolute
+    after:bottom-0 
+    after:left-0 
+    after:border-b-[1px] 
+    after:border-custom-dark
+    after:w-full
+    after:-translate-x-[110%]
+    hover:after:translate-x-0
+    after:transition
+    after:duration-500
+  }
+
+  .underline-animation-light {
+    @apply after:absolute
+    after:bottom-0 
+    after:left-0 
+    after:border-b-[1px] 
+    after:border-primary
+    after:w-full
+    after:-translate-x-[110%]
+    hover:after:translate-x-0
+    after:transition
+    after:duration-500
+    after:-z-10
+  }
+}
+

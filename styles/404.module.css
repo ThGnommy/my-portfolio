@@ -15,7 +15,7 @@
 }
 
 .notFound a {
-  @apply z-10 underline underline-offset-2 hover:text-secondary;
+  @apply z-10;
 }
 
 .notFound svg {
