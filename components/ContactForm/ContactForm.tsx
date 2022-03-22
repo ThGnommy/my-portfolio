@@ -7,6 +7,7 @@ export const ContactForm = () => {
       name="portfolio-contact-form"
       method="POST"
       data-netlify="true"
+      action="/thank-you"
     >
       <input
         type="hidden"
