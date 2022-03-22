@@ -12,8 +12,6 @@ export const Modal = ({ children, state, setState }: ModalProps) => {
     state
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "auto");
-
-    console.log("hi");
   }, [state]);
 
   return (

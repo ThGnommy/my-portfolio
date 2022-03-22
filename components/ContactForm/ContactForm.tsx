@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { MutableRefObject, useRef, useState } from "react";
 import Modal from "../Modal";
 import styles from "./ContactForm.module.css";
 
@@ -6,10 +6,22 @@ export const ContactForm = () => {
   const [showModal, setShowModal] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
+  const formRef = useRef<any>(null);
+
   const submitForm = (e: any) => {
     e.preventDefault();
     setShowModal(true);
     setFormSubmitted(true);
+
+    let formData = new FormData(formRef.current);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
   };
 
   return (
@@ -18,6 +30,8 @@ export const ContactForm = () => {
       name="portfolio-contact-form"
       method="POST"
       data-netlify="true"
+      netlify-honeypot="bot-field"
+      ref={formRef}
       onSubmit={submitForm}
     >
       <input
