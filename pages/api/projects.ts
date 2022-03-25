@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     name: "My Pexel",
-    description: "This is my last project from my journey in start2impact ",
+    description: "This is my last project from a Front End Development course in start2impact.it",
     tech: ["React", "Redux", "Firebase", "Styled Components"],
     image: "/images/projects/project-mypexel.png",
     website_link: "https://my-pexels.netlify.app/",
@@ -30,7 +30,7 @@ export const projects = [
   {
     id: 4,
     name: "Google Book Finder",
-    description: "A challenge by Frontend Mentor",
+    description: "A React application about books search",
     tech: ["React", "Redux", "Material-UI"],
     image: "/images/projects/project-book.png",
     website_link: "https://th-book-finder.netlify.app/",
