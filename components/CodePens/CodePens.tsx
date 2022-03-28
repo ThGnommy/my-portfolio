@@ -1,4 +1,3 @@
-import { IconPen } from "../Utils/Icons/IconPen";
 
 export const CodePens = () => {
   return (
@@ -9,7 +8,6 @@ export const CodePens = () => {
       {/* Less is More */}
 
       <div className="flex items-center w-full mb-8">
-        {/* <IconPen /> */}
         <div>
 
           <h3 className="text-3xl italic ml-2 py-1">✍️ Less is more.</h3>
