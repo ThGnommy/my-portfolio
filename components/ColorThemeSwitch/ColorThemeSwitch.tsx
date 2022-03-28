@@ -1,7 +1,28 @@
-import React from 'react'
+import React from "react";
 
-export const ColorThemeSwitch = () => {
+type ThemeProps = {
+  isDark: boolean;
+  handleThemeFunc: () => void;
+};
+
+export const ColorThemeSwitch = ({ isDark, handleThemeFunc }: ThemeProps) => {
+  const moon = "🌙";
+  const sun = "☀️";
+
   return (
-    <div>ColorThemeSwitch</div>
-  )
-}
+    <div
+      onClick={handleThemeFunc}
+      className={`absolute flex flex-col justify-center
+      items-start top-4 right-4 h-8 w-20 dark:bg-primary bg-custom-dark rounded-full shadow-inner drop-shadow-md cursor-pointer`}
+    >
+      <div
+        className={`flex flex-col justify-center items-center bg-primary dark:bg-custom-dark h-7 w-7 rounded-full my-[3px] mr-[3px] ${
+          isDark ? "ml-[3px]" : "ml-[49px]"
+        } ${isDark ? "shadow-inner" : "shadow-2xl"}
+        transition-all duration-150`}
+      >
+        <span>{isDark ? moon : sun}</span>
+      </div>
+    </div>
+  );
+};

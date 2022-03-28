@@ -4,8 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
-html {
-  @apply bg-black-primary font-rubik tracking-widest;
+body {
+  @apply bg-primary dark:bg-black-primary font-rubik tracking-widest;
 }
 
 .btn-primary {
@@ -23,7 +23,7 @@ html {
     after:-translate-x-[110%]
     hover:after:translate-x-0
     after:transition
-    after:duration-500
+    after:duration-500;
   }
 
   .underline-animation-light {
@@ -37,7 +37,6 @@ html {
     hover:after:translate-x-0
     after:transition
     after:duration-500
-    after:-z-10
+    after:-z-10;
   }
 }
-
