@@ -19,7 +19,7 @@ export const ColorThemeSwitch = ({ isDark, handleThemeFunc }: ThemeProps) => {
         className={`flex flex-col justify-center items-center bg-primary dark:bg-custom-dark h-7 w-7 rounded-full my-[3px] mr-[3px] ${
           !isDark ? "ml-[3px]" : "ml-[49px]"
         } ${isDark ? "shadow-inner" : "shadow-2xl"}
-        transition-[ml_shadow_rotate] duration-500 ${isDark ? "rotate-180" : "-rotate-180"}`}
+        transition-[ml_shadow_rotate] duration-500 ease-in-out ${isDark ? "rotate-180" : "-rotate-180"}`}
       >
         <span className="-scale-y-100">{isDark ? sun : moon}</span>
       </div>
