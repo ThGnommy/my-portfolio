@@ -17,11 +17,11 @@ export const ColorThemeSwitch = ({ isDark, handleThemeFunc }: ThemeProps) => {
     >
       <div
         className={`flex flex-col justify-center items-center bg-primary dark:bg-custom-dark h-7 w-7 rounded-full my-[3px] mr-[3px] ${
-          isDark ? "ml-[3px]" : "ml-[49px]"
+          !isDark ? "ml-[3px]" : "ml-[49px]"
         } ${isDark ? "shadow-inner" : "shadow-2xl"}
-        transition-all duration-150`}
+        transition-[ml_shadow] duration-300`}
       >
-        <span>{isDark ? moon : sun}</span>
+        <span className="-scale-x-100">{isDark ? sun : moon}</span>
       </div>
     </div>
   );

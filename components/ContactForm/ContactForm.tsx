@@ -14,15 +14,15 @@ export const ContactForm = () => {
         name="portfolio-contact-form"
         value="portfolio-contact-form"
       />
-      <div className={styles.formName}>
+      <div className={`${styles.formName} label-color`}>
         <input className={styles.input} type="text" name="name" placeholder="&nbsp;" required />
-        <label>Name</label>
+        <label className="dark:focus:text-secondary">Name</label>
       </div>
-      <div className={styles.formEmail}>
+      <div className={`${styles.formEmail} label-color`}>
         <input className={styles.input} type="email" name="email" placeholder="&nbsp;" required />
         <label>Email</label>
       </div>
-      <div className={styles.formMessage}>
+      <div className={`${styles.formMessage} label-color`}>
         <textarea
           className={styles.input}
           name="message"

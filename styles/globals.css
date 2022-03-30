@@ -39,4 +39,14 @@ body {
     after:duration-500
     after:-z-10;
   }
+
+  .label-color input:focus + label,
+  .label-color input:not(:placeholder-shown) + label {
+    @apply text-custom-dark dark:text-primary
+  }
+
+  .label-color textarea:focus + label,
+  .label-color textarea:not(:placeholder-shown) + label {
+    @apply text-custom-dark dark:text-primary
+  }
 }

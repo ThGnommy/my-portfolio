@@ -18,8 +18,8 @@ export const Layout = ({ children }: LayoutProps) => {
       setTheme(true);
     } else if (localStorage.theme === "dark") {
       doc.classList.remove("dark");
-      localStorage.clear();
       setTheme(false);
+      localStorage.clear();
     }
   };
 

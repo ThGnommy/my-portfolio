@@ -12,17 +12,17 @@
 
 .formName label,
 .formEmail label {
-  @apply absolute top-1/2 left-10 -translate-x-1/2 -translate-y-1/2 text-custom-dark transition-all duration-200 ease-in;
+  @apply absolute top-1/2 left-10 -translate-x-1/2 -translate-y-1/2 transition-all duration-200 ease-in;
 }
 
 .formName input:focus + label,
 .formName input:not(:placeholder-shown) + label {
-  @apply -top-4 left-7 text-primary;
+  @apply -top-4 left-7;
 }
 
-.formEmail input:focus + label,
-.formEmail input:not(:placeholder-shown) + label {
-  @apply -top-4 left-7 text-[#A35709];
+.form .formEmail input:focus + label,
+.form .formEmail input:not(:placeholder-shown) + label {
+  @apply -top-4 left-7;
 }
 
 .formMessage {
@@ -30,24 +30,28 @@
 }
 
 .formMessage label {
-  @apply absolute top-5 left-14 -translate-x-1/2 -translate-y-1/2 text-custom-dark transition-all duration-200 ease-in;
+  @apply absolute top-5 left-14 -translate-x-1/2 -translate-y-1/2 transition-all duration-200 ease-in;
 }
 
 .formMessage textarea:focus + label,
-.formMessage input:not(:placeholder-shown) + label {
-  @apply -top-4 left-11 text-custom-dark dark:text-primary;
+.formMessage textarea:not(:placeholder-shown) + label {
+  @apply -top-4 left-11;
 }
 
 .form label {
-  @apply text-lg pointer-events-none;
+  @apply text-lg pointer-events-none text-custom-dark;
 }
 
-.input {
+.form .input {
   @apply w-full text-custom-dark rounded-lg focus:ring-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-secondary;
 }
 
+.input:-internal-autofill-selected {
+  background-color: #fff!important;
+}
+
 .form textarea {
-  @apply text-custom-dark mb-2;
+  @apply mb-2;
 }
 
 .form button {
