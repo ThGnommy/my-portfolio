@@ -15,11 +15,11 @@ export const ContactForm = () => {
         value="portfolio-contact-form"
       />
       <div className={styles.formName}>
-        <input className={styles.input} type="text" name="name" required />
+        <input className={styles.input} type="text" name="name" placeholder="&nbsp;" required />
         <label>Name</label>
       </div>
       <div className={styles.formEmail}>
-        <input className={styles.input} type="email" name="email" required />
+        <input className={styles.input} type="email" name="email" placeholder="&nbsp;" required />
         <label>Email</label>
       </div>
       <div className={styles.formMessage}>
@@ -28,6 +28,7 @@ export const ContactForm = () => {
           name="message"
           cols={30}
           rows={10}
+          placeholder="&nbsp;"
           required
         ></textarea>
         <label>Message</label>

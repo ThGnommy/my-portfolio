@@ -16,5 +16,5 @@
 }
 
 .projectLinks a {
-  @apply bg-secondary rounded text-center w-24 even:mx-2 p-2 italic transition-transform hover:scale-105;
+  @apply text-primary bg-secondary rounded-full text-center w-24 even:mx-2 px-4 py-2 italic transition-transform hover:scale-105;
 }

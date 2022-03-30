@@ -32,7 +32,7 @@ export const Layout = ({ children }: LayoutProps) => {
   }, []);
 
   return (
-    <main className="max-w-[1024px] mx-auto px-6 sm:px-24 text-primary pb-4">
+    <main className="max-w-[1024px] mx-auto px-6 sm:px-24 text-custom-dark dark:text-primary pb-4">
       <ColorThemeSwitch isDark={theme} handleThemeFunc={handleDarkMode} />
       <Header />
       {children}

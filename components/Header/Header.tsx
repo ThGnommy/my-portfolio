@@ -29,7 +29,9 @@ export const Header = () => {
           <Link href="/">
             <a
               className={
-                router.pathname === "/" ? "text-secondary" : "text-primary"
+                router.pathname === "/"
+                  ? "text-secondary"
+                  : "text-custom-dark dark:text-primary"
               }
             >
               HOME
@@ -40,7 +42,7 @@ export const Header = () => {
               className={
                 router.pathname === "/projects"
                   ? "text-secondary"
-                  : "text-primary"
+                  : "text-custom-dark dark:text-primary"
               }
             >
               PROJECTS
@@ -49,7 +51,9 @@ export const Header = () => {
           <Link href="/pens">
             <a
               className={
-                router.pathname === "/pens" ? "text-secondary" : "text-primary"
+                router.pathname === "/pens"
+                  ? "text-secondary"
+                  : "text-custom-dark dark:text-primary"
               }
             >
               PENS
@@ -60,7 +64,7 @@ export const Header = () => {
               className={
                 router.pathname === "/contact"
                   ? "text-secondary"
-                  : "text-primary"
+                  : "text-custom-dark dark:text-primary"
               }
             >
               CONTACT
