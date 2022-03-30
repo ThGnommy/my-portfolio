@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { ColorThemeSwitch } from "../ColorThemeSwitch/ColorThemeSwitch";
 import Header from "../Header";
 
@@ -23,11 +23,12 @@ export const Layout = ({ children }: LayoutProps) => {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const doc = document.documentElement;
     // Create localstorage
     if (localStorage.theme === "dark") {
       doc.classList.add("dark");
+      setTheme(true);
     }
   }, []);
 
