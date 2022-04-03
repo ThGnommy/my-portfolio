@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useState } from "react";
 import { ColorThemeSwitch } from "../ColorThemeSwitch/ColorThemeSwitch";
 import Header from "../Header";
 
@@ -22,6 +22,13 @@ export const Layout = ({ children }: LayoutProps) => {
       localStorage.clear();
     }
   };
+
+  const useLayoutEffect =
+    typeof window !== "undefined" &&
+    window.document &&
+    window.document.createElement
+      ? React.useLayoutEffect
+      : React.useEffect;
 
   useLayoutEffect(() => {
     const doc = document.documentElement;

@@ -1,5 +1,5 @@
 .notFound {
-  @apply relative z-10 flex flex-col overflow-hidden min-h-screen min-w-full justify-center items-center px-4 text-primary text-center;
+  @apply relative z-10 flex flex-col overflow-hidden min-h-screen min-w-full justify-center items-center px-4 text-center;
 }
 
 .n {

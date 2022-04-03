@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import Layout from "../components/Layout";
 import { IconSadFace } from "../components/Utils/Icons/IconSadFace";
 import useTitle from "../hooks/useTitle";
 import classes from "../styles/404.module.css";
 
-
-
 export default function Custom404() {
   return (
-    <div className={classes.notFound}>
+    <div className={classes.notFound + " text-custom-dark dark:text-primary"}>
       <Head>
         <title>{useTitle()}</title>
       </Head>
@@ -18,8 +17,10 @@ export default function Custom404() {
       <p>Return to</p>
       <p className="overflow-hidden">
         <Link href="/">
-          <a className="relative inline underline-animation-light">www.thomasbrandoli.dev</a>
-          </Link>
+          <a className="relative inline dark:underline-animation-light underline-animation">
+            www.thomasbrandoli.dev
+          </a>
+        </Link>
       </p>
     </div>
   );
