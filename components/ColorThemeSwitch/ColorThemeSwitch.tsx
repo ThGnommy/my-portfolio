@@ -21,7 +21,7 @@ export const ColorThemeSwitch = ({ isDark, handleThemeFunc }: ThemeProps) => {
         } ${isDark ? "shadow-inner" : "shadow-2xl"}
         transition-[ml_shadow_rotate] duration-500 ease-in-out ${isDark ? "rotate-180" : "-rotate-180"}`}
       >
-        <span className="-scale-y-100">{isDark ? sun : moon}</span>
+        <span className="ml-[2px] -scale-y-100">{isDark ? sun : moon}</span>
       </div>
     </div>
   );
