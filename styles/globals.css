@@ -42,11 +42,11 @@ body {
 
   .label-color input:focus + label,
   .label-color input:not(:placeholder-shown) + label {
-    @apply text-custom-dark dark:text-primary
+    @apply text-custom-dark dark:text-primary;
   }
 
   .label-color textarea:focus + label,
   .label-color textarea:not(:placeholder-shown) + label {
-    @apply text-custom-dark dark:text-primary
+    @apply text-custom-dark dark:text-primary;
   }
 }

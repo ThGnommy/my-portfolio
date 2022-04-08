@@ -13,7 +13,9 @@ export const SinglePenComponent: React.FC<PenProps> = ({ penTitle, id }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className={`flex relative justify-center items-center w-80 h-80 m-4 bg-custom-dark dark:bg-primary rounded-lg text-center`}
+        className={`flex relative justify-center items-center w-80 h-80 m-4 bg-custom-dark 
+        ${selected ? "dark:bg-custom-dark" : "dark:bg-primary"}
+         rounded-lg text-center transition-all ease-out`}
         onClick={() => setSelected((prev) => !prev)}
         initial={false}
         animate={selected ? containerOpen : closed}
@@ -33,7 +35,7 @@ export const SinglePenComponent: React.FC<PenProps> = ({ penTitle, id }) => {
             scrolling="no"
             title={penTitle}
             src={`https://codepen.io/thgnommy/embed/preview/${id}?default-tab=&theme-id=dark`}
-            frameBorder="yes"
+            frameBorder="no"
             loading="eager"
             allowFullScreen={true}
           >
@@ -49,10 +51,14 @@ export const SinglePenComponent: React.FC<PenProps> = ({ penTitle, id }) => {
         {selected && (
           <motion.button
             initial={{ opacity: 0 }}
-            animate={selected ? { opacity: 1 } : { opacity: 0 }}
-            className="absolute h-[34px] w-32 top-2 -right-14 -translate-x-1/2 px-10 py-1 rounded-[2px] shadow-[inset_0px_3px_#797979] bg-[#555555] z-50"
+            animate={
+              selected
+                ? { opacity: 1, transition: { delay: 0.7 } }
+                : { opacity: 0 }
+            }
+            className="absolute text-[#eeeeee] rotate-90 px-8 py-2 -right-14 top-1/2 -translate-y-1/2 rounded-[2px] shadow-[inset_0px_3px_#797979] bg-[#555555] z-50"
           >
-            ❌
+            Close
           </motion.button>
         )}
       </motion.div>

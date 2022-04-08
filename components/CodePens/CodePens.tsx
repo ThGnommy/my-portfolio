@@ -10,9 +10,15 @@ export const CodePens = () => {
 
       <div className="flex flex-wrap justify-center items-center w-full mb-8">
         <SinglePenComponent penTitle="Less is More" id="gORgBXz" />
-        <SinglePenComponent penTitle="Less is More" id="gORgBXz" />
-        <SinglePenComponent penTitle="Less is More" id="gORgBXz" />
-        <SinglePenComponent penTitle="Less is More" id="gORgBXz" />
+        <SinglePenComponent penTitle="Anxiety." id="powRYmw" />
+        <SinglePenComponent penTitle="Success - Experience" id="wveoEMe" />
+        <SinglePenComponent penTitle="Truth - Perspective" id="xxrEJZa" />
+        <SinglePenComponent penTitle="Talk doesn't cook rise." id="JjJbbZO" />
+        <SinglePenComponent penTitle="CHANGE" id="oNwzONg" />
+        <SinglePenComponent
+          penTitle="Less fear, more understanding."
+          id="VwWjROj"
+        />
       </div>
     </section>
   );
