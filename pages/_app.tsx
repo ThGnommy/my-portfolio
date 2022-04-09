@@ -1,10 +1,10 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import TagManager, { TagManagerArgs } from "react-gtm-module";
+import TagManager from "react-gtm-module";
 import { useEffect } from "react";
 
 const tagManagerArgs = {
-  id: "G-SMPR3T9YNZ",
+  id: "G-3K07S7K4GR",
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
