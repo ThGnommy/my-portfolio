@@ -13,21 +13,19 @@ export const SinglePenComponent: React.FC<PenProps> = ({ penTitle, id }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className={`flex relative justify-center items-center w-80 h-80 m-4 bg-custom-dark 
-        ${selected ? "dark:bg-custom-dark" : "dark:bg-primary"}
-         rounded-lg text-center transition-all ease-out`}
+        className={`flex relative justify-center items-center w-80 h-80 m-4 bg-custom-dark dark:bg-primary rounded-lg text-center`}
         onClick={() => setSelected((prev) => !prev)}
         initial={false}
         animate={selected ? containerOpen : closed}
       >
         {!selected ? (
           <motion.h3 className="dark:text-custom-dark text-primary text-2xl italic ml-2 py-1">
-            ✍️ {penTitle}
+            ✍️ <p className="mt-4">{penTitle}</p>
           </motion.h3>
         ) : (
           <motion.iframe
             initial={{ opacity: 0 }}
-            animate={iframeOpen}
+            animate={selected && iframeOpen}
             className="z-50 rounded-lg"
             height="100%"
             width="100%"

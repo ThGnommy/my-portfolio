@@ -7,7 +7,7 @@ const variants = {
   closed: {
     width: "350px",
     height: "350px",
-    transition: { type: "spring", duration: 0.6 },
+    transition: { type: "spring", duration: 0.6, delay: 0.1 },
   },
   iframeOpen: {
     opacity: 1,
