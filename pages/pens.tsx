@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Layout from "../components/Layout";
 import useTitle from "../hooks/useTitle";
 
 export const MyPens: NextPage = () => {
