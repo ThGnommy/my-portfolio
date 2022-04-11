@@ -1,11 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import classes from "./Header.module.css";
+import { Line } from "./Line";
 
 export const Header = () => {
   const router = useRouter();
+
+  const [anim, setAnim] = useState(false);
+
+  useEffect(() => {
+    router.events.on("routeChangeStart", () => setAnim(false));
+    router.events.on("routeChangeComplete", () => setAnim(true));
+  }, [router]);
 
   return (
     <header className={classes.header}>
@@ -22,7 +30,8 @@ export const Header = () => {
       />
       <div className={classes.navSection}>
         <h1>
-          THOMAS BRANDOLI<span></span>
+          THOMAS BRANDOLI
+          <Line className={`${anim && "animate-line-animation"} w-10`} />
         </h1>
         <nav>
           <Link href="/">
@@ -74,3 +83,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

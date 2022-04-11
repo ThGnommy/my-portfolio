@@ -21,6 +21,20 @@ module.exports = {
         cxs: "400px",
       },
       keyframes: {
+        lineChange: {
+          "0%": {
+            width: "2.5rem",
+          },
+          "25%": {
+            width: "0rem",
+          },
+          "50%": {
+            width: "0rem",
+          },
+          "100%": {
+            width: "2.5rem",
+          },
+        },
         modalUp: {
           "0%": {
             transform: "translateX(-50%) translateY(300%)",
@@ -32,9 +46,10 @@ module.exports = {
       },
       animation: {
         "move-up": "modalUp 1.5s ease-out forwards",
+        "line-animation": "lineChange 0.7s ease-in-out forwards",
       },
     },
   },
   plugins: [require("@tailwindcss/forms")],
-  darkMode: "class"
+  darkMode: "class",
 };
