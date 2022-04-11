@@ -15,32 +15,31 @@ const Home: NextPage = () => {
         <meta name="description" content="Thomas Brandoli Portfolio" />
         <Favicon />
       </Head>
-      <Layout>
-        <section className="pb-8">
-          <h2 className="text-5xl font-light pb-8">
-            👋 hello there, I&apos;m Thomas.
-          </h2>
-          <p className="text-lg font-thin">
-            📍 I'm a Front End Developer from Modena, Italy.
-          </p>
-          <br />
-          <p className="text-lg font-thin">
-            🧑🏻‍💻 I'm focused on JavaScript and React.
-          </p>
-          <br />
-          <p className="text-lg font-thin">
-            👀 Aside from my job, I like to explore other technologies, and
-            programming languages. Currently, I enjoy playing with the 🤖 Godot
-            Game Engine.
-          </p>
-          <br />
-          <p className="text-lg font-thin">
-            ☀️ When I don't code, you can find me immersed in a book 📖, in a
-            videogame 🕹️, at jumping rope, or outside walking 🚶‍♂️ and running 🏃‍♂️
-            in the nature 🌳.
-          </p>
-        </section>
-      </Layout>
+
+      <section className="pb-8">
+        <h2 className="text-5xl font-light pb-8">
+          👋 hello there, I&apos;m Thomas.
+        </h2>
+        <p className="text-lg font-thin">
+          📍 I'm a Front End Developer from Modena, Italy.
+        </p>
+        <br />
+        <p className="text-lg font-thin">
+          🧑🏻‍💻 I'm focused on JavaScript and React.
+        </p>
+        <br />
+        <p className="text-lg font-thin">
+          👀 Aside from my job, I like to explore other technologies, and
+          programming languages. Currently, I enjoy playing with the 🤖 Godot
+          Game Engine.
+        </p>
+        <br />
+        <p className="text-lg font-thin">
+          ☀️ When I don't code, you can find me immersed in a book 📖, in a
+          videogame 🕹️, at jumping rope, or outside walking 🚶‍♂️ and running 🏃‍♂️ in
+          the nature 🌳.
+        </p>
+      </section>
     </div>
   );
 };

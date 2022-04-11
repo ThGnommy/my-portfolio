@@ -11,9 +11,10 @@ export const CodePens = () => {
       <div className="flex flex-wrap justify-center items-center w-full mb-8">
         <SinglePenComponent penTitle="Less is More" id="gORgBXz" />
         <SinglePenComponent penTitle="Anxiety" id="powRYmw" />
+        <SinglePenComponent penTitle="Insanity" id="rNGKjKN" />
         <SinglePenComponent penTitle="Success - Experience" id="wveoEMe" />
         <SinglePenComponent penTitle="Truth - Perspective" id="xxrEJZa" />
-        <SinglePenComponent penTitle="Talk doesn't cook rice" id="JjJbbZO" />
+        <SinglePenComponent penTitle="Talk doesn't cook rise" id="JjJbbZO" />
         <SinglePenComponent penTitle="Change" id="oNwzONg" />
         <SinglePenComponent
           penTitle="Less fear, more understanding"

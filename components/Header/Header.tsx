@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { IconArrow } from "../Utils/Icons/IconArrow";
 import classes from "./Header.module.css";
 
 export const Header = () => {

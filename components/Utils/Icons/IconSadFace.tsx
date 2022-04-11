@@ -2,7 +2,7 @@ export const IconSadFace = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-40 w-40"
+      className="h-40 w-40 mt-10"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"

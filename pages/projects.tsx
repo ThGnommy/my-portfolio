@@ -12,14 +12,13 @@ export const Projects: NextPage = ({ projects }: any) => {
       <Head>
         <title>{useTitle()}</title>
       </Head>
-      <Layout>
-        <section>
-          <h2 className="text-4xl font-medium pb-8">Projects</h2>
-          {projects.map((project: IProject) => (
-            <Project key={project.id} projects={project} />
-          ))}
-        </section>
-      </Layout>
+
+      <section>
+        <h2 className="text-4xl font-medium pb-8">Projects</h2>
+        {projects.map((project: IProject) => (
+          <Project key={project.id} projects={project} />
+        ))}
+      </section>
     </>
   );
 };
