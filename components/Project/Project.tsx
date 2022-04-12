@@ -3,7 +3,7 @@ import styles from "./Project.module.css";
 import { v4 as uuidv4 } from "uuid";
 import ImageWrapper from "../Utils/ImageWrapper/ImageWrapper";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const Project = ({ projects, index }: any) => {
   const technologies = projects.tech.map((tech: string) => (
@@ -15,7 +15,7 @@ export const Project = ({ projects, index }: any) => {
       <motion.section
         className={styles.project}
         key={projects.name}
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0, x: -200 }}
         animate={{
           opacity: 1,
           x: 0,

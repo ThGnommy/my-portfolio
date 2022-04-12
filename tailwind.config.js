@@ -46,7 +46,7 @@ module.exports = {
       },
       animation: {
         "move-up": "modalUp 1.5s ease-out forwards",
-        "line-animation": "lineChange 0.7s ease-in-out forwards",
+        "line-animation": "lineChange 1s ease-in-out forwards",
       },
     },
   },

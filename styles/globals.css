@@ -53,3 +53,13 @@ body {
     @apply text-custom-dark dark:text-primary;
   }
 }
+
+body::-webkit-scrollbar {
+  @apply w-3;
+}
+body::-webkit-scrollbar-track {
+  @apply dark:bg-custom-dark bg-primary;
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-my-brown shadow-inner;
+}
