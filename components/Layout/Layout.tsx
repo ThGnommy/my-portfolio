@@ -1,4 +1,3 @@
-import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { ColorThemeSwitch } from "../ColorThemeSwitch/ColorThemeSwitch";
 import Header from "../Header/Header";

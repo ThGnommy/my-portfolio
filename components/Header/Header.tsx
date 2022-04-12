@@ -11,9 +11,13 @@ export const Header = () => {
   const [anim, setAnim] = useState(false);
 
   useEffect(() => {
+    router.events.on("routeChangeError", () => setAnim(false));
+    router.events.on("routeChangeStart", () => setAnim(false));
+    router.events.on("routeChangeComplete", () => setAnim(true));
     return () => {
-      router.events.on("routeChangeStart", () => setAnim(false));
-      router.events.on("routeChangeComplete", () => setAnim(true));
+      router.events.off("routeChangeError", () => {});
+      router.events.off("routeChangeStart", () => {});
+      router.events.off("routeChangeComplete", () => {});
     };
   }, [router]);
 
