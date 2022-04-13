@@ -1,9 +1,10 @@
-import styles from "./ContactForm.module.css";
+import classes from "./ContactForm.module.css";
+import { motion } from "framer-motion";
 
 export const ContactForm = () => {
   return (
-    <form
-      className={styles.form}
+    <motion.form
+      className={classes.form}
       name="portfolio-contact-form"
       method="POST"
       data-netlify="true"
@@ -14,17 +15,29 @@ export const ContactForm = () => {
         name="portfolio-contact-form"
         value="portfolio-contact-form"
       />
-      <div className={`${styles.formName} label-color`}>
-        <input className={styles.input} type="text" name="name" placeholder="&nbsp;" required />
+      <div className={`${classes.formName} label-color`}>
+        <input
+          className={classes.input}
+          type="text"
+          name="name"
+          placeholder="&nbsp;"
+          required
+        />
         <label className="dark:focus:text-secondary">Name</label>
       </div>
-      <div className={`${styles.formEmail} label-color`}>
-        <input className={styles.input} type="email" name="email" placeholder="&nbsp;" required />
+      <div className={`${classes.formEmail} label-color`}>
+        <input
+          className={classes.input}
+          type="email"
+          name="email"
+          placeholder="&nbsp;"
+          required
+        />
         <label>Email</label>
       </div>
-      <div className={`${styles.formMessage} label-color`}>
+      <div className={`${classes.formMessage} label-color`}>
         <textarea
-          className={styles.input}
+          className={classes.input}
           name="message"
           cols={30}
           rows={10}
@@ -34,6 +47,6 @@ export const ContactForm = () => {
         <label>Message</label>
       </div>
       <button type="submit">Send</button>
-    </form>
+    </motion.form>
   );
 };

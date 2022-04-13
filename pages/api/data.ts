@@ -5,7 +5,7 @@ import projects from "./projects";
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<IProject[] | any>
+  res: NextApiResponse<IProject[] | {}>
 ) {
   try {
     res.status(200).json(projects);

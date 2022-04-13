@@ -7,8 +7,8 @@ export const ThankYou = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.5 } }}
-      exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
       className="text-primary dark:text-custom-dark text-center bg-custom-dark dark:bg-primary px-8 py-16 w-full rounded-lg shadow-lg"
     >
       <Head>

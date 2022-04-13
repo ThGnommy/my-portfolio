@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { ColorThemeSwitch } from "../ColorThemeSwitch/ColorThemeSwitch";
 import Header from "../Header/Header";
 
-interface LayoutProps {
-  children: React.ReactChild | React.ReactChildren;
-}
-
-export const Layout = ({ children }: LayoutProps) => {
+export const Layout: React.FC = ({ children }) => {
   // Dark is True - Light is False
   const [theme, setTheme] = useState(false);
 

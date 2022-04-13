@@ -1,10 +1,10 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import ContactForm from "../components/ContactForm";
 import useTitle from "../hooks/useTitle";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Meta } from "../components/Utils/Meta";
 import { Favicon } from "../components/Favicon/Favicon";
+import ContactForm from "../components/ContactForm";
 
 export const Contact: NextPage = () => {
   return (
@@ -17,8 +17,8 @@ export const Contact: NextPage = () => {
 
       <motion.section
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.5 } }}
-        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
+        exit={{ opacity: 0, transition: { duration: 0.1 } }}
       >
         <h2 className="text-4xl font-medium pb-8">Contact Me</h2>
         <ContactForm />

@@ -7,3 +7,7 @@ export interface IProject {
   website_link: string;
   github_link: string;
 }
+
+export interface IProjectList {
+  projects: IProject[];
+}

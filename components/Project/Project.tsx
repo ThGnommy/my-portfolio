@@ -4,8 +4,14 @@ import { v4 as uuidv4 } from "uuid";
 import ImageWrapper from "../Utils/ImageWrapper/ImageWrapper";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { IProject } from "../../pages/api/types";
 
-export const Project = ({ projects, index }: any) => {
+interface ProjectProps {
+  projects: IProject;
+  index: number;
+}
+
+export const Project = ({ projects, index }: ProjectProps) => {
   const technologies = projects.tech.map((tech: string) => (
     <li key={uuidv4()}>{tech}</li>
   ));
@@ -21,11 +27,11 @@ export const Project = ({ projects, index }: any) => {
           x: 0,
           transition: {
             delay: 0.3 * index,
-            duration: 1,
+            duration: 0.5,
             x: { type: "spring", stiffness: 70 },
           },
         }}
-        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        exit={{ opacity: 0, x: 0, transition: {duration: 0.2} }}
       >
         <ImageWrapper>
           <Image

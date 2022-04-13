@@ -15,9 +15,9 @@ export const Header = () => {
     router.events.on("routeChangeStart", () => setAnim(false));
     router.events.on("routeChangeComplete", () => setAnim(true));
     return () => {
-      router.events.off("routeChangeError", () => {});
-      router.events.off("routeChangeStart", () => {});
-      router.events.off("routeChangeComplete", () => {});
+      router.events.off("routeChangeError", () => setAnim(false));
+      router.events.off("routeChangeStart", () => setAnim(false));
+      router.events.off("routeChangeComplete", () => setAnim(true));
     };
   }, [router]);
 

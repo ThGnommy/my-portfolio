@@ -7,7 +7,7 @@ interface PenProps {
   id: string;
 }
 
-export const SinglePenComponent: React.FC<PenProps> = ({ penTitle, id }) => {
+export const SinglePenComponent = ({ penTitle, id }: PenProps) => {
   const [selected, setSelected] = useState(false);
 
   return (
