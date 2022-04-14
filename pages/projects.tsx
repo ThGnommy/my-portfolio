@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { Meta } from "../components/Utils/Meta";
 import { Favicon } from "../components/Favicon/Favicon";
 import { Project } from "../components/Project/Project";
+import { Fab } from "../components/Fab/Fab";
+import { InView } from "react-intersection-observer";
 
 export const Projects: NextPage<IProjectList> = ({ projects }) => {
   return (
@@ -17,14 +19,26 @@ export const Projects: NextPage<IProjectList> = ({ projects }) => {
         <Favicon />
       </Head>
       <motion.section>
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
-          exit={{ opacity: 0, transition: { duration: 0.1 } }}
-          className="text-4xl font-medium pb-8"
-        >
-          Projects
-        </motion.h2>
+        <InView>
+          {({ inView, ref }) => (
+            <>
+              <motion.h2
+                ref={ref}
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 0.5, delay: 0.2 },
+                }}
+                exit={{ opacity: 0, transition: { duration: 0.1 } }}
+                className="text-4xl font-medium pb-8"
+              >
+                Projects
+              </motion.h2>
+              <Fab show={inView} />
+            </>
+          )}
+        </InView>
+
         {projects.map((project: IProject, index: number) => (
           <Project key={project.id} projects={project} index={index} />
         ))}
