@@ -1,0 +1,63 @@
+.form {
+  @apply flex flex-col;
+}
+
+.formName {
+  @apply relative my-8;
+}
+
+.formEmail {
+  @apply relative mb-8;
+}
+
+.formName label,
+.formEmail label {
+  @apply absolute top-1/2 left-10 -translate-x-1/2 -translate-y-1/2 transition-all duration-200 ease-in;
+}
+
+.formName input:focus + label,
+.formName input:not(:placeholder-shown) + label {
+  @apply -top-4 left-7;
+}
+
+.form .formEmail input:focus + label,
+.form .formEmail input:not(:placeholder-shown) + label {
+  @apply -top-4 left-7;
+}
+
+.formMessage {
+  @apply relative;
+}
+
+.formMessage label {
+  @apply absolute top-5 left-14 -translate-x-1/2 -translate-y-1/2 transition-all duration-200 ease-in;
+}
+
+.formMessage textarea:focus + label,
+.formMessage textarea:not(:placeholder-shown) + label {
+  @apply -top-4 left-11;
+}
+
+.form label {
+  @apply text-lg pointer-events-none text-custom-dark;
+}
+
+.form .input {
+  @apply w-full text-custom-dark rounded-lg focus:ring-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-secondary;
+}
+
+.input:-internal-autofill-selected {
+  background-color: #fff!important;
+}
+
+.form textarea {
+  @apply mb-2;
+}
+
+.form button {
+  @apply bg-secondary text-primary py-2 w-28 rounded-lg;
+}
+
+.form button:disabled {
+  @apply bg-primary text-custom-dark py-2 w-28 rounded-lg;
+}

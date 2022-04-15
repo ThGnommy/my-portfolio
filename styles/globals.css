@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-primary dark:bg-black-primary font-rubik tracking-widest;
+}
+
+.btn-primary {
+  @apply rounded-full h-10 w-32 bg-secondary;
+}
+
+@layer components {
+  .underline-animation {
+    @apply after:absolute
+    after:bottom-0 
+    after:left-0 
+    after:border-b-[1px] 
+    after:border-custom-dark
+    after:w-full
+    after:-translate-x-[110%]
+    hover:after:translate-x-0
+    after:transition
+    after:duration-500;
+  }
+
+  .underline-animation-light {
+    @apply after:absolute
+    after:bottom-0 
+    after:left-0 
+    after:border-b-[1px] 
+    after:border-primary
+    after:w-full
+    after:-translate-x-[110%]
+    hover:after:translate-x-0
+    after:transition
+    after:duration-500;
+  }
+
+  .label-color input:focus + label,
+  .label-color input:not(:placeholder-shown) + label {
+    @apply text-custom-dark dark:text-primary;
+  }
+
+  .label-color textarea:focus + label,
+  .label-color textarea:not(:placeholder-shown) + label {
+    @apply text-custom-dark dark:text-primary;
+  }
+}
+
+body::-webkit-scrollbar {
+  @apply w-3;
+}
+body::-webkit-scrollbar-track {
+  @apply dark:bg-custom-dark bg-primary;
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-my-brown shadow-inner;
+}

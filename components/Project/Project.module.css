@@ -1,0 +1,20 @@
+.project {
+  @apply flex flex-col csm:flex-row justify-between items-center py-4;
+}
+
+.project ul li {
+  list-style: none;
+}
+
+.project ul li::before {
+  content: ">";
+  @apply font-thin text-lg mr-2;
+}
+
+.projectLinks {
+  @apply flex max-w-[20rem] csm:w-2/5;
+}
+
+.projectLinks a {
+  @apply text-primary bg-secondary rounded-full text-center w-24 even:mx-2 px-4 py-2 italic transition-transform hover:scale-105;
+}
