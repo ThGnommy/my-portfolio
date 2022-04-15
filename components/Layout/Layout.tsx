@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Analytics } from "../../analytics";
 import { ColorThemeSwitch } from "../ColorThemeSwitch/ColorThemeSwitch";
 import Header from "../Header/Header";
 
@@ -37,6 +38,7 @@ export const Layout: React.FC = ({ children }) => {
 
   return (
     <main className="max-w-[1024px] mx-auto px-6 sm:px-24 text-custom-dark dark:text-primary pb-4">
+      <Analytics />
       <ColorThemeSwitch isDark={theme} handleThemeFunc={handleDarkMode} />
       <Header />
       {children}
