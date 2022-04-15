@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { SinglePenComponent } from "./SinglePenComponent";
 import { InView } from "react-intersection-observer";
 import { Fab } from "../Fab/Fab";
-import { Ref } from "react";
 
 export const CodePens = () => {
   return (
@@ -16,7 +15,7 @@ export const CodePens = () => {
         Codepen Things
       </motion.h2>
       <InView>
-        {({ref, inView}) => (
+        {({ ref, inView }) => (
           <>
             <motion.p ref={ref} className="text-xl pb-8 font-light">
               Having fun in my free time
