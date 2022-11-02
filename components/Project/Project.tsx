@@ -31,14 +31,14 @@ export const Project = ({ projects, index }: ProjectProps) => {
             x: { type: "spring", stiffness: 70 },
           },
         }}
-        exit={{ opacity: 0, x: 0, transition: {duration: 0.2} }}
+        exit={{ opacity: 0, x: 0, transition: { duration: 0.2 } }}
       >
         <ImageWrapper>
           <Image
             src={projects.image}
             width={400}
             height={280}
-            objectFit={"cover"}
+            objectFit={"contain"}
             quality={45}
             placeholder="blur"
             blurDataURL="data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjcwMCIgaGVpZ2h0PSI0NzUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciPgogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjMzMzIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzIyMiIgb2Zmc2V0PSI1MCUiIC8+CiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiMzMzMiIG9mZnNldD0iNzAlIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI0NzUiIGZpbGw9IiMzMzMiIC8+CiAgPHJlY3QgaWQ9InIiIHdpZHRoPSI3MDAiIGhlaWdodD0iNDc1IiBmaWxsPSJ1cmwoI2cpIiAvPgogIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItNzAwIiB0bz0iNzAwIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+Cjwvc3ZnPg=="
@@ -50,14 +50,32 @@ export const Project = ({ projects, index }: ProjectProps) => {
           <p className="text-xl pb-4">{projects.description}</p>
           <ul className="font-thin text-lg opacity-80 pb-4">{technologies}</ul>
           <div className={styles.projectLinks}>
-            <Link href={projects.website_link}>
-              <a target="_blank">Website</a>
-            </Link>
+            {projects.website_link && (
+              <Link href={projects.website_link}>
+                <a target="_blank">Website</a>
+              </Link>
+            )}
             <Link href={projects.github_link}>
               <a target="_blank">Github</a>
             </Link>
           </div>
         </div>
+        {/* 
+        <div className="w-full h-72 relative">
+          <ImageWrapper>
+            <Image
+              src={projects.image}
+              // width={400}
+              // height={280}
+              layout="fill"
+              objectFit={"cover"}
+              quality={45}
+              placeholder="blur"
+              blurDataURL="data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjcwMCIgaGVpZ2h0PSI0NzUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciPgogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjMzMzIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzIyMiIgb2Zmc2V0PSI1MCUiIC8+CiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiMzMzMiIG9mZnNldD0iNzAlIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI0NzUiIGZpbGw9IiMzMzMiIC8+CiAgPHJlY3QgaWQ9InIiIHdpZHRoPSI3MDAiIGhlaWdodD0iNDc1IiBmaWxsPSJ1cmwoI2cpIiAvPgogIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItNzAwIiB0bz0iNzAwIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+Cjwvc3ZnPg=="
+              alt="project-image"
+            />
+          </ImageWrapper>
+        </div> */}
       </motion.section>
     </>
   );

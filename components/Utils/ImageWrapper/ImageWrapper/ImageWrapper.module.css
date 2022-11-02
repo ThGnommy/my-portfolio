@@ -1,8 +1,19 @@
 .wrapper {
   box-sizing: content-box;
+  transition: all 0.5s ease-in-out !important ;
 }
 
 .wrapper > span {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
+  background-color: #000 !important;
+}
+
+.wrapper > span img {
+  transition: all 0.5s ease-in-out !important ;
+  transform: scale(1.4);
+}
+
+.wrapper > span img:hover {
+  transform: scale(1);
 }

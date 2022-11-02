@@ -7,7 +7,7 @@
 }
 
 .project ul li::before {
-  content: ">";
+  content: "-";
   @apply font-thin text-lg mr-2;
 }
 
