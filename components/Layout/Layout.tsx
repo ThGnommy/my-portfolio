@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Analytics } from "../../analytics";
+import React, { useLayoutEffect, useState } from "react";
 import { ColorThemeSwitch } from "../ColorThemeSwitch/ColorThemeSwitch";
 import Header from "../Header/Header";
 
@@ -20,12 +19,12 @@ export const Layout: React.FC = ({ children }) => {
     }
   };
 
-  const useLayoutEffect =
-    typeof window !== "undefined" &&
-    window.document &&
-    window.document.createElement
-      ? React.useLayoutEffect
-      : React.useEffect;
+  // const useLayoutEffect =
+  //   typeof window !== "undefined" &&
+  //   window.document &&
+  //   window.document.createElement
+  //     ? React.useLayoutEffect
+  //     : React.useEffect;
 
   useLayoutEffect(() => {
     const doc = document.documentElement;
@@ -38,7 +37,6 @@ export const Layout: React.FC = ({ children }) => {
 
   return (
     <main className="max-w-[1024px] mx-auto px-6 sm:px-24 text-custom-dark dark:text-primary pb-4">
-      <Analytics />
       <ColorThemeSwitch isDark={theme} handleThemeFunc={handleDarkMode} />
       <Header />
       {children}
