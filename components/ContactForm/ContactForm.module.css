@@ -47,7 +47,7 @@
 }
 
 .input:-internal-autofill-selected {
-  background-color: #fff!important;
+  background-color: #fff !important;
 }
 
 .form textarea {

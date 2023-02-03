@@ -1,13 +1,17 @@
-import classes from "./ContactForm.module.css";
 import { motion } from "framer-motion";
+import classes from "./ContactForm.module.css";
+import { useContactForm } from "./useContactForm";
 
 export const ContactForm = () => {
+  const { errors, onSubmit } = useContactForm();
+
   return (
     <motion.form
       className={classes.form}
+      data-netlify="true"
       name="portfolio-contact-form"
       method="POST"
-      data-netlify="true"
+      onSubmit={onSubmit}
       action="/thank-you"
     >
       <input
@@ -21,20 +25,22 @@ export const ContactForm = () => {
           type="text"
           name="name"
           placeholder="&nbsp;"
-          required
         />
         <label className="dark:focus:text-secondary">Name</label>
+        <div className="absolute right-0 text-red-500">{errors.name}</div>
       </div>
+
       <div className={`${classes.formEmail} label-color`}>
         <input
           className={classes.input}
           type="email"
           name="email"
           placeholder="&nbsp;"
-          required
         />
         <label>Email</label>
       </div>
+      <div className="text-red-500">{errors.email}</div>
+
       <div className={`${classes.formMessage} label-color`}>
         <textarea
           className={classes.input}
@@ -42,9 +48,9 @@ export const ContactForm = () => {
           cols={30}
           rows={10}
           placeholder="&nbsp;"
-          required
         ></textarea>
         <label>Message</label>
+        <div className="absolute right-0 text-red-500">{errors.message}</div>
       </div>
       <button type="submit">Send</button>
     </motion.form>
