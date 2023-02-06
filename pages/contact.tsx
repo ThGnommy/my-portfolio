@@ -4,8 +4,8 @@ import useTitle from "../hooks/useTitle";
 import { motion } from "framer-motion";
 import { Meta } from "../components/Utils/Meta";
 import { Favicon } from "../components/Favicon/Favicon";
-import ContactForm from "../components/ContactForm";
-import classes from "./ContactForm.module.css";
+// import ContactForm from "../components/ContactForm";
+import classes from "../components/ContactForm/ContactForm.module.css";
 import { useContactForm } from "../components/ContactForm/useContactForm";
 
 export const Contact: NextPage = () => {
@@ -74,6 +74,12 @@ export const Contact: NextPage = () => {
             </div>
           </div>
           <button type="submit">Send</button>
+
+          <p hidden>
+            <label>
+              Don't fill this out: <input name="bot-field" />
+            </label>
+          </p>
         </motion.form>
       </motion.section>
     </>
