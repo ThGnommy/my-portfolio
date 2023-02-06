@@ -11,6 +11,7 @@ export const ContactForm = () => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       name="portfolio-contact-form"
+      data-netlify-recaptcha="true"
       method="POST"
       onSubmit={(evt) => onSubmit(evt)}
       action="/thank-you"
