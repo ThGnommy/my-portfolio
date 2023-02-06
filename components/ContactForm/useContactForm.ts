@@ -3,9 +3,9 @@ import { useState, FormEventHandler } from "react";
 import { z } from "zod";
 
 const formSchema = z.object({
-  name: z.string().min(3),
-  email: z.string().email(),
-  message: z.string().min(1),
+  name: z.string().min(3, "Name is too short."),
+  email: z.string().email("Invalid email."),
+  message: z.string().min(1, "A message is required."),
 });
 
 type FormValues = z.infer<typeof formSchema>;

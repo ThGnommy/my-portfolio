@@ -34,7 +34,11 @@ export const ContactForm = () => {
           placeholder="&nbsp;"
         />
         <label className="dark:focus:text-secondary">Name</label>
-        <div className="absolute right-0 text-red-500">{errors.name}</div>
+        {errors.name && (
+          <div className="absolute sm:text-base text-sm tracking-tight -top-3 -right-3 text-red-500 bg-custom-dark dark:bg-primary rounded-full px-2">
+            {errors.name}
+          </div>
+        )}
       </div>
 
       <div className={`${classes.formEmail} label-color`}>
@@ -45,8 +49,12 @@ export const ContactForm = () => {
           placeholder="&nbsp;"
         />
         <label>Email</label>
+        {errors.email && (
+          <div className="absolute sm:text-base text-sm tracking-tight -top-3 -right-3 text-red-500 bg-custom-dark dark:bg-primary rounded-full px-2">
+            {errors.email}
+          </div>
+        )}
       </div>
-      <div className="text-red-500">{errors.email}</div>
 
       <div className={`${classes.formMessage} label-color`}>
         <textarea
@@ -57,7 +65,11 @@ export const ContactForm = () => {
           placeholder="&nbsp;"
         ></textarea>
         <label>Message</label>
-        <div className="absolute right-0 text-red-500">{errors.message}</div>
+        {errors.message && (
+          <div className="absolute sm:text-base text-sm tracking-tight -top-3 -right-3 text-red-500 bg-custom-dark dark:bg-primary rounded-full px-2">
+            {errors.message}
+          </div>
+        )}
       </div>
       <button type="submit">Send</button>
     </motion.form>
