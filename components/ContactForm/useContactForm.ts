@@ -35,7 +35,7 @@ export const useContactForm = () => {
         params.set(key, value);
       });
 
-      fetch("/thank-you", {
+      fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
