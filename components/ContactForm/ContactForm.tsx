@@ -20,6 +20,12 @@ export const ContactForm = () => {
         name="portfolio-contact-form"
         value="portfolio-contact-form"
       />
+      <p hidden>
+        <label>
+          Don’t fill this out: <input name="bot-field" />
+        </label>
+      </p>
+
       <div className={`${classes.formName} label-color`}>
         <input
           className={classes.input}
