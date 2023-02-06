@@ -12,7 +12,7 @@ export const ContactForm = () => {
       data-netlify-honeypot="bot-field"
       name="portfolio-contact-form"
       method="POST"
-      onSubmit={onSubmit}
+      onSubmit={(e) => onSubmit(e)}
       action="/thank-you"
     >
       <input

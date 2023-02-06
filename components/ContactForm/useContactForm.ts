@@ -40,9 +40,8 @@ export const useContactForm = () => {
       });
 
       const merged = Object.assign(params.toString(), {
-        "form-name": "portfolio-contact-form",
+        "form-name": evt.currentTarget.name,
       });
-      console.log(params.toString());
 
       fetch("/", {
         method: "POST",
