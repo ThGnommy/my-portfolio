@@ -35,12 +35,12 @@ export const useContactForm = () => {
         params.set(key, value);
       });
 
-      fetch("/", {
+      fetch("/thank-you", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
       })
-        .then(() => {
+        .then((x) => {
           push(form.action);
         })
         .catch((error) => {

@@ -9,6 +9,7 @@ export const ContactForm = () => {
     <motion.form
       className={classes.form}
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
       name="portfolio-contact-form"
       method="POST"
       onSubmit={(evt) => onSubmit(evt)}
@@ -18,6 +19,7 @@ export const ContactForm = () => {
         type="hidden"
         name="portfolio-contact-form"
         value="portfolio-contact-form"
+        data-netlify="true"
       />
       <div className={`${classes.formName} label-color`}>
         <input
