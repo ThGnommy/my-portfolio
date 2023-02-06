@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Meta } from "../components/Utils/Meta";
 import { Favicon } from "../components/Favicon/Favicon";
 import ContactForm from "../components/ContactForm";
+import { useEffect } from "react";
 
 export const Contact: NextPage = () => {
   return (
