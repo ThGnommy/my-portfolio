@@ -11,7 +11,7 @@ export const ContactForm = () => {
       data-netlify="true"
       name="portfolio-contact-form"
       method="POST"
-      onSubmit={onSubmit}
+      onSubmit={(evt) => onSubmit(evt)}
       action="/thank-you"
     >
       <input

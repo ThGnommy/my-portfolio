@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
 import { Favicon } from "../components/Favicon/Favicon";
 import { Meta } from "../components/Utils/Meta";
 import useTitle from "../hooks/useTitle";

@@ -15,6 +15,7 @@ export const useContactForm = () => {
   const [formStateErrors, setFormStateErrors] = useState<Partial<FormValues>>(
     {}
   );
+
   const onSubmit: FormEventHandler<HTMLFormElement> = (evt) => {
     evt.preventDefault();
 
@@ -39,7 +40,9 @@ export const useContactForm = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
       })
-        .then(() => push(form.action))
+        .then(() => {
+          push(form.action);
+        })
         .catch((error) => {
           // TODO handle error
           alert(error);
