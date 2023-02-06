@@ -11,16 +11,14 @@ export const ContactForm = () => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       name="portfolio-contact-form"
-      data-netlify-recaptcha="true"
       method="POST"
-      onSubmit={(evt) => onSubmit(evt)}
+      onSubmit={onSubmit}
       action="/thank-you"
     >
       <input
         type="hidden"
         name="portfolio-contact-form"
         value="portfolio-contact-form"
-        data-netlify="true"
       />
       <div className={`${classes.formName} label-color`}>
         <input
