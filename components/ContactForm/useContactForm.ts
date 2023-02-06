@@ -31,16 +31,25 @@ export const useContactForm = () => {
     if (validation.success) {
       const params = new URLSearchParams();
 
-      Object.entries(validation.data).map(([key, value]) => {
+      const validationWithName = Object.assign(validation.data, {
+        "form-name": "portfolio-contact-form",
+      });
+
+      Object.entries(validationWithName).map(([key, value]) => {
         params.set(key, value);
       });
+
+      const merged = Object.assign(params.toString(), {
+        "form-name": "portfolio-contact-form",
+      });
+      console.log(params.toString());
 
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: params.toString(),
+        body: merged.toString(),
       })
-        .then((x) => {
+        .then(() => {
           push(form.action);
         })
         .catch((error) => {
