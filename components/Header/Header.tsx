@@ -73,6 +73,17 @@ export const Header = () => {
               PENS
             </a>
           </Link>
+          <Link href="/blog">
+            <a
+              className={
+                router.pathname === "/blog"
+                  ? "text-secondary"
+                  : "text-custom-dark dark:text-primary"
+              }
+            >
+              BLOG
+            </a>
+          </Link>
           <Link href="/contact">
             <a
               className={
