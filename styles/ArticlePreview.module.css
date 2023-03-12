@@ -1,7 +1,0 @@
-.articlePreview {
-  @apply border-2 m-4 p-2;
-}
-
-.articlePreview h1 {
-  @apply text-2xl cursor-pointer;
-}
