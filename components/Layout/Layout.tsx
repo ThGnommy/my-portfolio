@@ -18,14 +18,6 @@ export const Layout: React.FC = ({ children }) => {
       localStorage.clear();
     }
   };
-
-  // const useLayoutEffect =
-  //   typeof window !== "undefined" &&
-  //   window.document &&
-  //   window.document.createElement
-  //     ? React.useLayoutEffect
-  //     : React.useEffect;
-
   useLayoutEffect(() => {
     const doc = document.documentElement;
     // Create localstorage
