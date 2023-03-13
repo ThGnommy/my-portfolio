@@ -2,6 +2,10 @@
   @apply flex flex-col csm:flex-row justify-between items-center py-4;
 }
 
+.project img {
+  border-radius: 12px;
+}
+
 .project ul li {
   list-style: none;
 }
