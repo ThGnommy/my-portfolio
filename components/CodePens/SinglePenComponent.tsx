@@ -12,7 +12,7 @@ export const SinglePenComponent = ({ penTitle, id }: PenProps) => {
 
   return (
     <motion.div
-      className={`flex relative justify-center items-center w-80 h-80 m-4 bg-custom-dark dark:bg-primary rounded-lg text-center`}
+      className={`flex relative justify-center items-center w-80 h-80 m-4 bg-custom-dark dark:bg-primary rounded-lg text-center cursor-pointer`}
       onClick={() => setSelected((prev) => !prev)}
       initial={false}
       animate={selected ? containerOpen : closed}
