@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import { Line } from "./Line";
-import avatarPic from '../../public/images/me.jpg'
+import avatarPic from "../../public/images/me.jpg";
+import { Dropdown } from "./Dropdown/Dropdown";
 export const Header = () => {
   const router = useRouter();
 
@@ -50,6 +51,7 @@ export const Header = () => {
               HOME
             </a>
           </Link>
+
           <Link legacyBehavior href="/projects">
             <a
               className={
@@ -61,17 +63,7 @@ export const Header = () => {
               PROJECTS
             </a>
           </Link>
-          <Link legacyBehavior href="/pens">
-            <a
-              className={
-                router.pathname === "/pens"
-                  ? "text-secondary"
-                  : "text-custom-dark dark:text-primary"
-              }
-            >
-              PENS
-            </a>
-          </Link>
+          <Dropdown />
           <Link legacyBehavior href="/contact">
             <a
               className={

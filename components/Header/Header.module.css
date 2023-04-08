@@ -22,7 +22,8 @@
   @apply flex flex-wrap flex-row justify-start w-full;
 }
 
-.navSection nav a {
+.navSection nav a,
+.navSection ul li {
   @apply text-base px-1 cursor-pointer hover:text-secondary transition-colors duration-150;
 }
 
