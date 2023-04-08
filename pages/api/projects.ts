@@ -29,6 +29,14 @@ export const projects = [
     github_link: "https://github.com/ThGnommy/react-native-news-app",
   },
   {
+    id: 7,
+    name: "Portfolio",
+    description: "Feel free to checkout my personal portfolio repository",
+    tech: ["Next.js", "TailwindCSS", "Typescript"],
+    image: "/images/projects/personal-portfolio.png",
+    github_link: "https://github.com/ThGnommy/my-portfolio",
+  },
+  {
     id: 4,
     name: "Rest Countries",
     description: "A challenge by Frontend Mentor",
@@ -56,7 +64,7 @@ export const projects = [
     github_link: "https://github.com/ThGnommy/another-weather-app-webpack",
   },
   {
-    id: 7,
+    id: 8,
     name: "URL Shortening Landing Page",
     description: "A challenge by Frontend Mentor",
     tech: ["Next.js"],
