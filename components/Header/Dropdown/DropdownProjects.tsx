@@ -11,13 +11,19 @@ export const DropdownProjects = () => {
     "hidden"
   );
 
+  const handleDarkMode =
+    router.pathname === "/web-projects" ||
+    router.pathname === "/mobile-projects"
+      ? "text-secondary"
+      : "text-custom-dark dark:text-primary";
+
   return (
     <ul
       onMouseEnter={() => setDropdownState("flex")}
       onMouseLeave={() => setDropdownState("hidden")}
       className={styles.dropdownContainer}
     >
-      <li className="">PROJECTS</li>
+      <li className={handleDarkMode}>PROJECTS</li>
       <div
         className={
           styles.dropdown + ` dark:bg-primary bg-custom-dark ${dropdownState}`

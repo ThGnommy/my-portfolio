@@ -11,13 +11,18 @@ export const DropdownFun = () => {
     "hidden"
   );
 
+  const handleDarkMode =
+    router.pathname === "/other-projects" || router.pathname === "/pens"
+      ? "text-secondary"
+      : "text-custom-dark dark:text-primary";
+
   return (
     <ul
       onMouseEnter={() => setDropdownState("flex")}
       onMouseLeave={() => setDropdownState("hidden")}
       className={styles.dropdownContainer}
     >
-      <li className="">FUN</li>
+      <li className={handleDarkMode}>FUN</li>
       <div
         className={
           styles.dropdown + ` dark:bg-primary bg-custom-dark ${dropdownState}`
