@@ -11,9 +11,7 @@ export const CodePens = () => {
       exit={{ opacity: 0, transition: { duration: 0.1 } }}
       className="relative"
     >
-      <motion.h2 className="text-4xl font-medium pb-4">
-        Codepen Things
-      </motion.h2>
+      <motion.h2 className="text-4xl font-medium pb-4">Codepens</motion.h2>
       <InView>
         {({ ref, inView }) => (
           <>

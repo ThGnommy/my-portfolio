@@ -4,10 +4,11 @@ export interface IProject {
   description: string;
   tech: string[];
   image: string;
-  website_link: string;
+  website_link?: string;
   github_link: string;
+  type?: "web" | "mobile";
 }
 
 export interface IProjectList {
-  projects: IProject[];
+  projects: { main: IProject[]; other: IProject[] };
 }

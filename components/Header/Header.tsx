@@ -4,7 +4,9 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import { Line } from "./Line";
-import avatarPic from '../../public/images/me.jpg'
+import avatarPic from "../../public/images/me.jpg";
+import { DropdownFun } from "./Dropdown/DropdownFun";
+import { DropdownProjects } from "./Dropdown/DropdownProjects";
 export const Header = () => {
   const router = useRouter();
 
@@ -50,28 +52,20 @@ export const Header = () => {
               HOME
             </a>
           </Link>
-          <Link legacyBehavior href="/projects">
+
+          {/* <Link legacyBehavior href="/web-projects">
             <a
               className={
-                router.pathname === "/projects"
+                router.pathname === "/web-projects"
                   ? "text-secondary"
                   : "text-custom-dark dark:text-primary"
               }
             >
               PROJECTS
             </a>
-          </Link>
-          <Link legacyBehavior href="/pens">
-            <a
-              className={
-                router.pathname === "/pens"
-                  ? "text-secondary"
-                  : "text-custom-dark dark:text-primary"
-              }
-            >
-              PENS
-            </a>
-          </Link>
+          </Link> */}
+          <DropdownProjects />
+          <DropdownFun />
           <Link legacyBehavior href="/contact">
             <a
               className={

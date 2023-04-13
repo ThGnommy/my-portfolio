@@ -7,9 +7,10 @@ import { IProject } from "../../pages/api/types";
 interface ProjectProps {
   projects: IProject;
   index: number;
+  topLeft?: boolean;
 }
 
-export const Project = ({ projects, index }: ProjectProps) => {
+export const Project = ({ projects, index, topLeft = false }: ProjectProps) => {
   const technologies = projects.tech.map((tech: string) => (
     <li key={uuidv4()}>{tech}</li>
   ));
@@ -18,7 +19,10 @@ export const Project = ({ projects, index }: ProjectProps) => {
     <>
       <motion.section
         className={styles.project}
-        style={{backgroundImage: `url('${projects.image}')`}}
+        style={{
+          backgroundImage: `url('${projects.image}')`,
+          backgroundPosition: topLeft ? "top left" : "center",
+        }}
         key={projects.name}
         initial={{ opacity: 0, x: -200 }}
         animate={{
@@ -33,9 +37,15 @@ export const Project = ({ projects, index }: ProjectProps) => {
         exit={{ opacity: 0, x: 0, transition: { duration: 0.2 } }}
       >
         <section className="dark:text-primary text-primary">
-          <h3 className="text-2xl sm:text-3xl py-2 sm:py-4 underline">{projects.name}</h3>
-          <p className="text-lg sm:text-xl pb-2 sm:pb-4">{projects.description}</p>
-          <ul className="hidden sm:block font-thin text-lg pb-4">{technologies}</ul>
+          <h3 className="text-2xl sm:text-3xl py-2 sm:py-4 underline">
+            {projects.name}
+          </h3>
+          <p className="text-lg sm:text-xl pb-2 sm:pb-4">
+            {projects.description}
+          </p>
+          <ul className="hidden sm:block font-thin text-lg pb-4">
+            {technologies}
+          </ul>
           <div className={styles.projectLinks}>
             {projects.website_link && (
               <Link href={projects.website_link} target="_blank">

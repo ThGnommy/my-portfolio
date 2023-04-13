@@ -10,7 +10,7 @@ export const ProjectList = ({ projects }: IProjectList) => {
       animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.2 } }}
       exit={{ opacity: 0, transition: { duration: 0.2, staggerChildren: 0.5 } }}
     >
-      {projects.map((project: IProject, index: number) => (
+      {projects.main.map((project: IProject, index: number) => (
         <Project key={project.id} projects={project} index={index} />
       ))}
     </motion.div>
