@@ -25,20 +25,17 @@ export const projects = {
       id: 3,
       name: "Early Bird Times",
       description: "News Application made with React Native",
-      tech: ["React Native", "Redux-Toolkit", "NativeBase", "Firebase"],
+      tech: [
+        "React Native",
+        "Expo",
+        "Redux-Toolkit",
+        "Typescript",
+        "NativeBase",
+        "Firebase",
+      ],
       image: "/images/projects/project-news-app.png",
-      // website_link: "https://another-weather-application.netlify.app/",
       github_link: "https://github.com/ThGnommy/react-native-news-app",
       type: "mobile",
-    },
-    {
-      id: 7,
-      name: "Portfolio",
-      description: "Feel free to checkout my personal portfolio repository",
-      tech: ["Next.js", "TailwindCSS", "Typescript"],
-      image: "/images/projects/personal-portfolio.png",
-      github_link: "https://github.com/ThGnommy/my-portfolio",
-      type: "web",
     },
     {
       id: 4,
@@ -71,6 +68,16 @@ export const projects = {
       type: "web",
     },
     {
+      id: 7,
+      name: "Portfolio",
+      description: "Feel free to checkout my personal portfolio repository",
+      tech: ["Next.js", "TailwindCSS", "Typescript"],
+      image: "/images/projects/personal-portfolio.png",
+      github_link: "https://github.com/ThGnommy/my-portfolio",
+      type: "web",
+    },
+
+    {
       id: 8,
       name: "URL Shortening Landing Page",
       description: "A challenge by Frontend Mentor",
@@ -80,6 +87,16 @@ export const projects = {
         "https://url-shortening-landing-page-gn6novblf-gnommy.vercel.app/",
       github_link: "https://github.com/ThGnommy/url-shortening-landing-page",
       type: "web",
+    },
+    {
+      id: 9,
+      name: "Free From Trash",
+      description:
+        "App that helps to clean places from trash in a collaboration manner",
+      tech: ["React Native", "Expo", "Typescript", "Magnus UI", "Firebase"],
+      image: "/images/projects/project-free-from-trash.png",
+      github_link: "https://github.com/ThGnommy/free-from-trash",
+      type: "mobile",
     },
   ],
   other: [
