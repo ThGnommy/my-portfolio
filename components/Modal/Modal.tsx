@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Modal.module.css";
 
 interface ModalProps {
-  children: React.ReactChild | React.ReactChildren;
+  children: React.ReactNode;
   state: boolean;
   setState: (state: boolean) => void;
 }
