@@ -13,13 +13,13 @@ export const Header = () => {
   const [anim, setAnim] = useState(false);
 
   useEffect(() => {
-    router.events.on("routeChangeError", () => setAnim(false));
     router.events.on("routeChangeStart", () => setAnim(false));
     router.events.on("routeChangeComplete", () => setAnim(true));
+    router.events.on("routeChangeError", () => setAnim(false));
     return () => {
-      router.events.off("routeChangeError", () => setAnim(false));
       router.events.off("routeChangeStart", () => setAnim(false));
       router.events.off("routeChangeComplete", () => setAnim(true));
+      router.events.off("routeChangeError", () => setAnim(false));
     };
   }, [router]);
 
@@ -52,18 +52,6 @@ export const Header = () => {
               HOME
             </a>
           </Link>
-
-          {/* <Link legacyBehavior href="/web-projects">
-            <a
-              className={
-                router.pathname === "/web-projects"
-                  ? "text-secondary"
-                  : "text-custom-dark dark:text-primary"
-              }
-            >
-              PROJECTS
-            </a>
-          </Link> */}
           <DropdownProjects />
           <DropdownFun />
           <Link legacyBehavior href="/contact">
