@@ -10,7 +10,7 @@ import { Project } from "../components/Project/Project";
 import { Fab } from "../components/Fab/Fab";
 import { InView } from "react-intersection-observer";
 
-export const Projects: NextPage<IProjectList> = ({ projects }) => {
+const Projects: NextPage<IProjectList> = ({ projects }) => {
   return (
     <>
       <Head>

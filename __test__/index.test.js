@@ -6,6 +6,7 @@ import "@testing-library/jest-dom";
 jest.mock("next/router", () => ({
   useRouter() {
     return {
+      pathname: "/web-projects",
       events: {
         on: jest.fn(),
         off: jest.fn(),
