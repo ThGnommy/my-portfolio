@@ -25,6 +25,7 @@ export const DropdownProjects = () => {
     >
       <li className={handleDarkMode}>PROJECTS</li>
       <div
+        aria-label="dropdown-projects"
         className={
           styles.dropdown + ` dark:bg-primary bg-custom-dark ${dropdownState}`
         }
