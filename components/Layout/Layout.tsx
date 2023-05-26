@@ -22,8 +22,10 @@ export const Layout = ({ children }: Props) => {
       localStorage.clear();
     }
   };
+
   useLayoutEffect(() => {
     const doc = document.documentElement;
+
     // Create localstorage
     if (localStorage.theme === "dark") {
       doc.classList.add("dark");

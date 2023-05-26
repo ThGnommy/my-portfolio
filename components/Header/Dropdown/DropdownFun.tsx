@@ -24,6 +24,7 @@ export const DropdownFun = () => {
     >
       <li className={handleDarkMode}>FUN</li>
       <div
+        aria-label="dropdown-fun"
         className={
           styles.dropdown + ` dark:bg-primary bg-custom-dark ${dropdownState}`
         }

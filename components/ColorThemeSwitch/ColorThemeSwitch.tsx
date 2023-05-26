@@ -11,6 +11,7 @@ export const ColorThemeSwitch = ({ isDark, handleThemeFunc }: ThemeProps) => {
 
   return (
     <div
+      aria-label="color-theme-switch"
       onClick={handleThemeFunc}
       className={`absolute flex flex-col justify-center
       items-start top-4 right-4 h-8 w-20 dark:bg-primary bg-custom-dark rounded-full shadow-inner drop-shadow-md cursor-pointer`}
