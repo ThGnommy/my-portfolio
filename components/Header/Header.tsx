@@ -7,6 +7,7 @@ import { Line } from "./Line";
 import avatarPic from "../../public/images/me.jpg";
 import { DropdownFun } from "./Dropdown/DropdownFun";
 import { DropdownProjects } from "./Dropdown/DropdownProjects";
+import { GithubIcon, ItchIOIcon, LinkedinIcon } from "./HeaderIcons";
 export const Header = () => {
   const router = useRouter();
 
@@ -36,10 +37,21 @@ export const Header = () => {
         alt="avatar"
       />
       <div className={styles.navSection}>
-        <h1>
-          THOMAS BRANDOLI
-          <Line className={`${anim && "animate-line-animation"} w-10`} />
-        </h1>
+        <section className="flex justify-start items-center gap-4">
+          <div className="flex flex-col">
+            <h1>THOMAS BRANDOLI</h1>
+            <Line
+              className={`bg-secondary ${
+                anim && "animate-line-animation"
+              } w-10`}
+            />
+          </div>
+          <div className="flex -mt-3 justify-center items-end gap-3">
+            <GithubIcon />
+            <LinkedinIcon />
+            <ItchIOIcon />
+          </div>
+        </section>
         <nav>
           <Link legacyBehavior href="/">
             <a
