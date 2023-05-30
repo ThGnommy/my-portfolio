@@ -27,7 +27,7 @@ describe("test all header links", () => {
     render(<Header />);
     // '/' 'web-project' 'mobile-project' 'pens' 'other-project' 'contact'
     const links = screen.getAllByRole("link");
-    expect(links).toHaveLength(6);
+    expect(links).toHaveLength(9);
   });
 
   test("home link", () => {
@@ -88,5 +88,29 @@ describe("test all header links", () => {
     const homeLink = screen.getByRole("link", { name: /contact/i });
     expect(homeLink).toHaveAttribute("href", "/contact");
     expect(homeLink).toBeInTheDocument();
+  });
+
+  test("github link", () => {
+    render(<Header />);
+    const githubLink = screen.getByLabelText("github-link");
+    expect(githubLink).toHaveAttribute("href", "https://github.com/ThGnommy");
+    expect(githubLink).toBeInTheDocument();
+  });
+
+  test("linkedin link", () => {
+    render(<Header />);
+    const linkedinLink = screen.getByLabelText("linkedin-link");
+    expect(linkedinLink).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/thbrandoli/"
+    );
+    expect(linkedinLink).toBeInTheDocument();
+  });
+
+  test("itch.io link", () => {
+    render(<Header />);
+    const itchLink = screen.getByLabelText("itchio-link");
+    expect(itchLink).toHaveAttribute("href", "https://gnommy.itch.io/");
+    expect(itchLink).toBeInTheDocument();
   });
 });
