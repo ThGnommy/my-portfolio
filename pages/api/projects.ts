@@ -102,15 +102,24 @@ export const projects = {
   other: [
     {
       id: 1,
+      name: "Simple Platformer",
+      description: "A simple platformer game, learning Godot 4",
+      tech: ["GDScript, Godot"],
+      image: "/images/other-projects/mini-platformer.png",
+      website_link: "https://gnommy.itch.io/simple-platformer",
+      github_link: "https://github.com/ThGnommy/mini-platformer",
+    },
+    {
+      id: 2,
       name: "Flappy Bird Remake",
       description: "My remake of the game Flappy Bird in Godot",
-      tech: ["Godot"],
+      tech: ["GDScript, Godot"],
       image: "/images/other-projects/flappy-bird.gif",
       website_link: "",
       github_link: "https://github.com/ThGnommy/flappy-bird-godot",
     },
     {
-      id: 2,
+      id: 3,
       name: "Tic Tac Toe",
       description: "My implementation of the game Tic Tac Toe in Lua",
       tech: ["Lua"],
